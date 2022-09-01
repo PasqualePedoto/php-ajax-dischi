@@ -8,13 +8,13 @@ const app = new Vue({
   },
   methods: {
     fetchData() {
-      axios.get("http://localhost:8888/demo/php-ajax-dischi/api/api.php/").then(() => {
-        this.movies = results;
+      axios.get("../api/api.php").then((res) => {
+        this.movies = res.data;
       });
     },
     fetchMovies() {
-      axios.get(`http://localhost:8888/demo/php-ajax-dischi/api/api.php/?search=${search}`).then(() => {
-        this.movies = results;
+      axios.get(`../api/api.php/?search=${this.search}`).then((res) => {
+        this.movies = res.data;
       });
     },
   },
