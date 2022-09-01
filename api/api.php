@@ -1,5 +1,7 @@
 <?php
 
+include '../includes/data.php';
+
 $results = $discs;
 $search = $_GET['search'] ?? '';
 

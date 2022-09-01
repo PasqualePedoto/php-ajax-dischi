@@ -29,8 +29,47 @@
     ></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- HEADER -->
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <!-- Header Content Area -->
+              <div>
+                <figure class="m-0">
+                  <img src="../images/logo.svg" alt="logo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-    <script src="./script.js"></script>
+      <!-- MAIN -->
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="d-flex flex-wrap">
+                <div v-for="movie in movies" class="card">
+                  <figure class="m-0 mb-2 h-50">
+                    <img :src="movie.poster" :alt="movie.title" />
+                  </figure>
+                  <div class="h-50 text-center d-flex flex-column justify-content-between">
+                    <h2 class="mb-3 text-white">{{movie.title}}</h2>
+                    <div>
+                      <p class="color-gray">{{movie.author}}</p>
+                      <p class="color-gray">{{movie.year}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

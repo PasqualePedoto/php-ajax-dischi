@@ -8,7 +8,7 @@ const app = new Vue({
   },
   methods: {
     fetchData() {
-      axios.get("http://localhost/8888/demo/php-ajax-dischi/index.php").then(() => {
+      axios.get("http://localhost:8888/demo/php-ajax-dischi/api/api.php/").then(() => {
         this.movies = res.data;
       });
     },
