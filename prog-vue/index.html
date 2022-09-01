@@ -40,9 +40,9 @@
                 <figure class="m-0">
                   <img src="../images/logo.svg" alt="logo" />
                 </figure>
-                <form @submit.prevent="fetchMovies" class="text-white d-flex align-items-center justify-content-center">
+                <form @submit.prevent="fetchAlbums" class="text-white d-flex align-items-center justify-content-center">
                   <label for="search" class="me-2">
-                    <input type="text" id="search" placeholder="Search an album..." v-model="search" required />
+                    <input type="text" id="search" placeholder="Search an album..." v-model.trim="search" />
                   </label>
                   <button type="submit">Search!</button>
                 </form>
