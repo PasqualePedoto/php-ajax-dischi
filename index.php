@@ -84,16 +84,20 @@ $discs = [
             <div class="row">
                 <div class="col">
                     <div class="d-flex flex-wrap">
+                        <?php foreach($discs as $disc) : ?>
                         <div class="card">
-                            <figure class="m-0 h-50">
-                                <img src="" alt="">
+                            <figure class="m-0 mb-2 h-50">
+                                <img src="<?php echo $disc['poster']?>" alt="<?php $disc['title'] ?>">
                             </figure>
-                            <div class="h-50">
-                                <h1 class="mb-3"></h1>
-                                <p></p>
-                                <p></p>
+                            <div class="h-50 text-center d-flex flex-column justify-content-between">
+                                <h2 class="mb-3 text-white"><?php echo $disc['title'] ?></h2>
+                                <div>
+                                    <p class="color-gray"><?php echo $disc['author'] ?></p>
+                                    <p class="color-gray"><?php echo $disc['year'] ?></p>
+                                </div>
                             </div>
                         </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
