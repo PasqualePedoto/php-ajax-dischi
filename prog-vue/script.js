@@ -15,7 +15,6 @@ const app = new Vue({
     fetchAlbums() {
       axios.get(`../api/api.php?search=${this.search}`).then((res) => {
         this.movies = res.data;
-        console.log(this.movies);
       });
     },
   },

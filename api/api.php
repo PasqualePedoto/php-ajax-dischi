@@ -4,11 +4,10 @@ include '../includes/data.php';
 
 $results = $discs;
 $search = $_GET['search'] ?? '';
-echo $search;
 
 if($search){
+    $results = [];
     foreach($discs as $disc){
-        $results = [];
         $title = strtolower($disc['title']);
         $searched_term = strtolower($search);
         if(strpos($title,$searched_term) !== false) $results[] = $disc;
